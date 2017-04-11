@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.wangchenlong.constraintlayout">
+
+    <application>
+        <activity
+            android:name=".ConstraintLayoutActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+</manifest>

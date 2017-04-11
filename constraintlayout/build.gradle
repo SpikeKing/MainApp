@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+
+def libs = rootProject.ext.libraries    // 库
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // DataBinding绑定
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile("com.android.support.test.espresso:espresso-core:$libs.espresso", {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile "com.android.support:appcompat-v7:$libs.support"
+    testCompile "junit:junit:$libs.junit"
+    compile "com.android.support:design:$libs.support"
+    compile "com.android.support.constraint:constraint-layout:$libs.constraint"
+
+    compile "com.android.support:recyclerview-v7:$libs.support" // RecyclerView
+
+    compile project(':styles')
+}

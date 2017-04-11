@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="module"
+            type="org.wangchenlong.mainapp.list.Module" />
+    </data>
+
+    <!--每个模块是一个CardView-->
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="@dimen/module_card_half_margin"
+        android:layout_marginLeft="@dimen/module_card_margin"
+        android:layout_marginRight="@dimen/module_card_margin"
+        android:layout_marginTop="@dimen/module_card_half_margin"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/item_cl_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/item_iv_bkg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                app:imageResource="@{module.moduleBkg}" />
+
+            <TextView
+                android:id="@+id/item_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/darkgray"
+                android:padding="4dp"
+                android:text="@{module.moduleName}"
+                android:textColor="@color/hotpink"
+                android:textSize="@dimen/module_card_title_size"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/item_cl_container"
+                app:layout_constraintEnd_toEndOf="@id/item_cl_container"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="@id/item_cl_container"
+                app:layout_constraintTop_toTopOf="@id/item_cl_container"
+                app:layout_constraintVertical_bias="0.5"
+                tools:text="Item Name" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</layout>
