@@ -8,6 +8,7 @@ import android.view.View;
 
 import org.wangchenlong.constraintlayout.list.Member;
 import org.wangchenlong.constraintlayout.list.MemberAdapter;
+import org.wangchenlong.constraintlayout.member.MemberDialogFragment;
 import org.wangchenlong.styles.Utils;
 
 import java.util.ArrayList;
@@ -39,6 +40,8 @@ public class ConstraintLayoutActivity extends AppCompatActivity {
             View.OnClickListener listener = new View.OnClickListener() {
                 @Override public void onClick(View v) {
                     Utils.showToast(ConstraintLayoutActivity.this, member.toString());
+                    MemberDialogFragment.newInstance(member)
+                            .show(getSupportFragmentManager(), null);
                 }
             };
             mListeners.add(listener);

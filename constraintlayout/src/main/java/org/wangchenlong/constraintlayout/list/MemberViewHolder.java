@@ -31,8 +31,7 @@ public class MemberViewHolder extends RecyclerView.ViewHolder {
     public void bind(Member member, View.OnClickListener listener) {
         mBinding.setMember(member);
 
-        resetImageViewHeight(member.drawableRes);
-        mBinding.memberIvLogo.setImageResource(member.drawableRes);
+        resetImageViewHeight(member.drawableRes, member);
 
         mBinding.memberIvName.setText(member.name);
 
@@ -60,10 +59,12 @@ public class MemberViewHolder extends RecyclerView.ViewHolder {
      *
      * @param res 图片资源
      */
-    private void resetImageViewHeight(@DrawableRes int res) {
+    private void resetImageViewHeight(@DrawableRes int res, Member member) {
         ViewGroup.LayoutParams lp = mBinding.memberIvLogo.getLayoutParams();
-        lp.height = getImageViewHeight(mContext, res);
+        int imgHeight = getImageViewHeight(mContext, res);
+        lp.height = imgHeight;
         mBinding.memberIvLogo.setLayoutParams(lp);
+        mBinding.memberIvLogo.setImageBitmap(Utils.getResizedHeightBitmap(mContext, member.drawableRes, imgHeight));
     }
 
     /**

@@ -20,7 +20,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberViewHolder> {
     private final List<View.OnClickListener> mListeners;
 
     public MemberAdapter(final @NonNull List<Member> members,
-                         final @NonNull List<View.OnClickListener> listeners) {
+            final @NonNull List<View.OnClickListener> listeners) {
         mMembers = members;
         mListeners = listeners;
     }

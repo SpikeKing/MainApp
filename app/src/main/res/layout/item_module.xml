@@ -23,7 +23,7 @@
         app:cardElevation="2dp">
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/item_cl_container"
+            android:id="@+id/item_cl_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -46,11 +46,11 @@
                 android:textColor="@color/hotpink"
                 android:textSize="@dimen/module_card_title_size"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@id/item_cl_container"
-                app:layout_constraintEnd_toEndOf="@id/item_cl_container"
+                app:layout_constraintBottom_toBottomOf="@id/item_cl_content"
+                app:layout_constraintEnd_toEndOf="@id/item_cl_content"
                 app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toStartOf="@id/item_cl_container"
-                app:layout_constraintTop_toTopOf="@id/item_cl_container"
+                app:layout_constraintStart_toStartOf="@id/item_cl_content"
+                app:layout_constraintTop_toTopOf="@id/item_cl_content"
                 app:layout_constraintVertical_bias="0.5"
                 tools:text="Item Name" />
 

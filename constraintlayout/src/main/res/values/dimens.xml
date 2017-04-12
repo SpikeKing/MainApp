@@ -3,4 +3,6 @@
     <dimen name="member_margin">4dp</dimen>
     <dimen name="member_name_margin">4dp</dimen>
     <dimen name="member_bkg_corner">8dp</dimen>
+
+    <dimen name="member_dialog_height">400dp</dimen>
 </resources>
