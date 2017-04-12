@@ -5,4 +5,17 @@
     <dimen name="member_bkg_corner">8dp</dimen>
 
     <dimen name="member_dialog_height">400dp</dimen>
+    <dimen name="member_avatar_size">56dp</dimen>
+
+    <dimen name="member_space_huge">32dp</dimen>
+    <dimen name="member_space_middle">16dp</dimen>
+
+    <dimen name="member_text_size_large">18sp</dimen>
+    <dimen name="member_text_size_middle">16sp</dimen>
+
+    <dimen name="spacing_huge">32dp</dimen>
+    <dimen name="spacing_big">24dp</dimen>
+    <dimen name="spacing_large">16dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+
 </resources>

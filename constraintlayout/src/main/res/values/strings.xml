@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ConstraintLayout</string>
+
+    <string name="label_color">颜色</string>
+    <string name="label_constellation">星座</string>
+    <string name="label_weight">体重</string>
+    <string name="label_height">身高</string>
 </resources>

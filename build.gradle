@@ -24,11 +24,12 @@ task clean(type: Delete) {
 // 项目配置
 ext {
     libraries = [
-            support    : "25.3.1",
-            espresso   : "2.2.2",
-            junit      : "4.12",
-            constraint : "1.0.2",
-            butterknife: "8.5.1",
-            glide      : "3.7.0"
+            support        : "25.3.1",
+            espresso       : "2.2.2",
+            junit          : "4.12",
+            constraint     : "1.0.2",
+            butterknife    : "8.5.1",
+            glide          : "3.7.0",
+            circleimageview: "2.1.0"
     ]
 }

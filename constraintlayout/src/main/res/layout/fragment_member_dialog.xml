@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlHardcoded">
 
     <data>
 
@@ -15,7 +18,63 @@
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/member_dialog_height">
+            android:layout_height="wrap_content">
+
+            <!--使用packed链式, 集中在中间-->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/member_civ_avatar"
+                android:layout_width="@dimen/member_avatar_size"
+                android:layout_height="@dimen/member_avatar_size"
+                android:layout_marginLeft="@dimen/member_space_huge"
+                android:layout_marginTop="@dimen/member_space_middle"
+                android:contentDescription="@null"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:src="@color/black" />
+
+            <!--右侧对齐左侧, 水平weight是1, 直接填充-->
+            <TextView
+                android:id="@+id/member_tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="@{member.name}"
+                android:textColor="@color/blue_grey_700"
+                android:textSize="@dimen/member_text_size_large"
+                app:layout_constraintBottom_toBottomOf="@id/member_civ_avatar"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintLeft_toRightOf="@id/member_civ_avatar"
+                app:layout_constraintRight_toLeftOf="@+id/member_tv_duty"
+                app:layout_constraintTop_toTopOf="@id/member_civ_avatar"
+                tools:text="AOA" />
+
+            <TextView
+                android:id="@+id/member_tv_duty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/member_space_middle"
+                android:text="@{member.duty}"
+                android:textColor="@color/blue_grey_400"
+                android:textSize="@dimen/member_text_size_middle"
+                app:layout_constraintBaseline_toBaselineOf="@id/member_tv_name"
+                app:layout_constraintLeft_toRightOf="@id/member_tv_name"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="主唱" />
+
+            <ViewSwitcher
+                android:id="@+id/member_vs_properties"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:inAnimation="@anim/slide_in_right"
+                android:outAnimation="@anim/slide_out_left"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/member_tv_name">
+
+            </ViewSwitcher>
+
 
         </android.support.constraint.ConstraintLayout>
 

@@ -1,6 +1,7 @@
 package org.wangchenlong.constraintlayout.member;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.view.LayoutInflater;
@@ -20,7 +21,7 @@ public class MemberDialogFragment extends BottomSheetDialogFragment {
     private Member mMember; // 成员数据
     private FragmentMemberDialogBinding mBinding;
 
-    public static MemberDialogFragment newInstance(Member member) {
+    public static MemberDialogFragment newInstance(@NonNull Member member) {
         Bundle args = new Bundle();
         args.putSerializable(ARG_MEMBER, member);
 
@@ -40,5 +41,16 @@ public class MemberDialogFragment extends BottomSheetDialogFragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        mMember = getMember();
+        mBinding.setMember(mMember);
+    }
+
+    /**
+     * 获取传递数据
+     *
+     * @return 当前成员
+     */
+    private Member getMember() {
+        return (Member) getArguments().getSerializable(ARG_MEMBER);
     }
 }

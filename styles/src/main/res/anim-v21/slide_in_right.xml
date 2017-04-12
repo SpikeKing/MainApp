@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!--android:interpolator仅在21以上版本支持-->
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/fast_out_slow_in">
+
+    <!--从右侧移动到当前-->
+    <translate
+        android:duration="@android:integer/config_mediumAnimTime"
+        android:fromXDelta="100%"
+        android:toXDelta="0%" />
+
+    <!--由透明到清晰-->
+    <alpha
+        android:duration="@android:integer/config_mediumAnimTime"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0" />
+</set>

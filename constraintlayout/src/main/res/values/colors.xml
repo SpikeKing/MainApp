@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grey_800">#565656</color>
+    <color name="blue_grey_400">#90A4AE</color>
+    <color name="blue_grey_700">#455a64</color>
+    <color name="blue_grey_900">#37474F</color>
+
+    <color name="member_yellow">#FDBC56</color>
+    <color name="member_blue">#2DA6F2</color>
+    <color name="member_green">#7ECB59</color>
+    <color name="member_purple">#746AE7</color>
+    <color name="member_red">#B54B36</color>
+</resources>

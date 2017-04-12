@@ -39,6 +39,7 @@ dependencies {
     compile "com.android.support.constraint:constraint-layout:$libs.constraint"
 
     compile "com.android.support:recyclerview-v7:$libs.support" // RecyclerView
+    compile "de.hdodenhof:circleimageview:$libs.circleimageview" // 圆形头像
 
     compile project(':styles')
 }
